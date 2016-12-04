@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,17 +11,66 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="raquell.mont.tareas.MainActivity">
 
+    <ImageView
+        app:srcCompat="@drawable/skype"
+        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="40dp"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        />
+
     <TextView
+        android:text="Nombre de Skype, correo electronico o número de telefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/textView7"
+        android:layout_above="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginBottom="17dp" />
+
+    <TextView
+        android:text="Iniciar Sesión"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="#6d6d70"
+        android:textSize="19sp"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed" />
 
     <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
+        android:text="Iniciar Sesión"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:textColorLink="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="103dp"
+        android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="199dp"
-        android:id="@+id/button" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/editText2"
+        android:shadowColor="@color/colorPrimary"
+        android:cursorVisible="true"
+        android:nextFocusDown="@color/colorPrimary"
+        android:hint=""
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
