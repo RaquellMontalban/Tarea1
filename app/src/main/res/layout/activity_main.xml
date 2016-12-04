@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -9,7 +9,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="raquell.mont.tareas.MainActivity">
+    tools:context="raquell.mont.tareas.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <ImageView
         app:srcCompat="@drawable/skype"
@@ -17,8 +19,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_margin="40dp"
-        android:layout_width="400dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp"
+
+        android:layout_weight="0.09" />
+
+
+    <TextView
+        android:text="Iniciar Sesión"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="#6d6d70"
+        android:textSize="19sp"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:autoText="false"
+        android:textAlignment="center"
         />
 
     <TextView
@@ -29,34 +48,9 @@
         android:layout_above="@+id/editText2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-
-        android:layout_marginBottom="17dp" />
-
-    <TextView
-        android:text="Iniciar Sesión"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:textColor="#6d6d70"
-        android:textSize="19sp"
-        android:layout_marginBottom="29dp"
-        android:layout_above="@+id/textView7"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-condensed" />
-
-    <Button
-        android:text="Iniciar Sesión"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:textColorLink="@color/colorPrimary"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@android:color/background_light"
-        android:layout_marginBottom="103dp"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginBottom="17dp"
+        android:textAlignment="center"
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -73,4 +67,41 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-</RelativeLayout>
+    <Button
+        android:text="Iniciar Sesión"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:textColorLink="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:text="Crear cuenta nueva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:textAlignment="center"
+        android:layout_margin="0dp"
+        />
+
+    <TextView
+        android:text="¿No puedes iniciar sesión?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+
+        android:textStyle="normal|bold" />
+</LinearLayout>
